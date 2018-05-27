@@ -19,7 +19,7 @@ public class SaveStaff
 
         //Teaching staff entity
         TeachingStaff ts1=new TeachingStaff(
-                1,"Gopal","MSc MEd","Maths");
+                1,"Tekin","MSc MEd","Maths");
         TeachingStaff ts2=new TeachingStaff(
                 2, "Manisha", "BSc BEd", "English");
         //Non-Teaching Staff entity
@@ -33,6 +33,7 @@ public class SaveStaff
         entitymanager.persist(ts2);
         entitymanager.persist(nts1);
         entitymanager.persist(nts2);
+
         entitymanager.getTransaction().commit();
         entitymanager.close();
         emfactory.close();

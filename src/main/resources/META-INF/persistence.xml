@@ -2,7 +2,6 @@
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
     <persistence-unit name="JPA"
                       transaction-type="RESOURCE_LOCAL">
-        <class>cn.tekin.jpa.entity.Employee</class>
         <class>cn.tekin.jpa.entity.Staff</class>
         <class>cn.tekin.jpa.entity.NonTeachingStaff</class>
         <class>cn.tekin.jpa.entity.TeachingStaff</class>
@@ -14,8 +13,18 @@
             <property name="javax.persistence.jdbc.driver"
                       value="com.mysql.jdbc.Driver"/>
             <property name="eclipselink.logging.level" value="FINE"/>
-            <property name="eclipselink.ddl-generation"
-                      value="create-tables"/>
+
+            <!--关于ddl-generation配置有四种方式：-->
+            <!--1）create-tables：将执行create table为每个表，如果该表已经存在，eclipselink将遵循默认的行为为特定数据库和JDBC驱动程序组合，在大多数情况下，抛出一个异常，而不是 创建表，现有的表被使用。-->
+            <!--2）create-or-extend-tables：创建表，如果表已经存在，则会添加任何缺少的列。-->
+            <!--3）drop-and-create-tables:删除所有的表，然后创建所有的表，如果遇到任何问题，将遵循默认的行为为特定数据库和JDBC驱动程序组合，然后继续下一句语句。这通常是在变化频繁或测试过程中使用的。-->
+            <!--4）none：默认值，不创建表，不创建schema。-->
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+
+            <property name="eclipselink.create-ddl-jdbc-file-name" value="createDDL_ddlGeneration.jdbc"/>
+            <property name="eclipselink.drop-ddl-jdbc-file-name" value="dropDDL_ddlGeneration.jdbc"/>
+            <property name="eclipselink.ddl-generation.output-mode" value="both"/>
+
         </properties>
     </persistence-unit>
 </persistence>
