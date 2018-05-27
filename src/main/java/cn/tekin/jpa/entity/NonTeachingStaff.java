@@ -1,10 +1,8 @@
 package cn.tekin.jpa.entity;
 
 import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@PrimaryKeyJoinColumn(referencedColumnName="sid")
 public class NonTeachingStaff extends Staff
 {
     private String areaexpertise;
