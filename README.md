@@ -120,7 +120,7 @@ Query		| 该接口由每个JPA供应商，能够获得符合标准的关系对�
 
 ---
 
-##Java Bean标准
+## Java Bean标准
 
 Java类封装了实例的值及其行为为对象称为一个单元。 Java Bean是一个临时的存储和可重用的组件或对象。它是有一个默认的构造函数和getter和setter方法来初始化实例序列化的类单独的属性。
 
@@ -142,8 +142,9 @@ bean属性可以被隔离成布尔属性或者非布尔属性。
 
 ---
 
-##安装使用EclipseLink JPA
-在pom.xml中增加
+## 安装使用EclipseLink JPA
+ 
+ 在pom.xml中增加
 
 ```xml
 <!-- https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa -->
