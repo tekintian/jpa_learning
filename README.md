@@ -18,15 +18,15 @@
 
 数据导航：在一个对象网络对象之间的数据导航是在这两种模式中有所不同。
 
-##JPA是什么?
+## JPA是什么?
 
 Java持久性API(简称JAP)是类和方法的集合，以海量数据关系映射持久并存储到数据库，这是由Oracle公司提供方案技术。
 
-##在哪里使用JPA？
+## 在哪里使用JPA？
 
 为了减少编写代码，对象关系管理的负担，程序员遵循“JPA提供者”框架，它可以方便地与数据库实例的交互。这里所需要的框架接管JPA。
 
-##JPA 历史
+## JPA 历史
 
 早期版本的EJB，定义持久层结合使用 javax.ejb.EntityBean 接口作为业务逻辑层。
 
@@ -36,7 +36,7 @@ JPA2.0的JAVA EE 6规范发布于2009年12月10日并成Java Community Process J
 
 JPA2.1使用JSR338 的 JAVA EE7的规范发布于2013年4月22日。
 
-##JPA提供者
+## JPA提供者
 
 JPA是一个开源的API，因此各企业厂商如Oracle，Redhat，Eclipse等，通过增加 JPA 持续性，在提供JPA的新产品。这些产品包括：
 
@@ -74,9 +74,11 @@ Query		| 该接口由每个JPA供应商，能够获得符合标准的关系对�
 
 
 上述的类和接口用于存储实体到数据库的一个记录。帮助程序员通过减少自己编写代码将数据存储到数据库中，使他们能够专注于更重要的业务活动代码，如 数据库表映射的类编写代码。
+
+
 ---
 
-##JPA类关系
+## JPA类关系
 - EntityManagerFactory和EntityManager的关系是1对多。这是一个工厂类EntityManager实例。
 
 - EntityManager和EntityTransaction之间的关系是1对1。对于每个EntityManager操作，只有一个EntityTransaction实例。
@@ -85,8 +87,8 @@ Query		| 该接口由每个JPA供应商，能够获得符合标准的关系对�
 
 - EntityManager实体之间的关系是1对多。一个EntityManager实例可以管理多个实体。
 
-
-##注解
+---
+## 注解
 一般的XML文件用于配置特定的组件，或者映射两种不同规格的组件。在我们的例子中，我们要分别保持在一个框架的XML文件。这意味着在写一个映射的XML文件，我们需要比较用mapping.xml文件实体标签的POJO类的属性。
 
 这里是解决方案。在类定义中，我们可以使用注释写配置的一部分。注解用于类，属性和方法。注释以'@'符号在类，属性或方法的注释中声明之前。 JPA的所有批注在javax.persistence包定义。
@@ -116,6 +118,7 @@ Query		| 该接口由每个JPA供应商，能够获得符合标准的关系对�
 @NamedQueries | 	指定命名查询的列表。
 @NamedQuery | 	指定使用静态名称的查询。
 
+---
 
 ##Java Bean标准
 
@@ -137,6 +140,8 @@ bean属性可以被隔离成布尔属性或者非布尔属性。
 
 对于布尔型属性，方法是检查它是否是 true 或 false。例如，Boolean属性为空，则该字段的就是方法isEmpty()。
 
+---
+
 ##安装使用EclipseLink JPA
 在pom.xml中增加
 
@@ -155,6 +160,8 @@ bean属性可以被隔离成布尔属性或者非布尔属性。
             <version>5.1.46</version>
         </dependency>
 ```
+
+---
 
 ## Java持久化查询语言 JPQL
 JPQL代表Java持久化查询语言。它被用来创建针对实体的查询存储在关系数据库中。 JPQL是基于SQL语法的发展。但它不会直接影响到数据库。
@@ -226,6 +233,8 @@ Between, And, 和Like是JPQL的主要关键字。这些关键字在查询子句�
 [命名查询演示实例](tree/v0.1.2)
 
 
+---
+
 ## 继承策略
 继承是任何面向对象语言的核心理念，因此我们可以用实体之间的继承关系和策略。JPA支持三种类型的继承策略：SINGLE_TABLE，JOINED_TABLE和TABLE_PER_CLASS。
 
@@ -238,6 +247,8 @@ Between, And, 和Like是JPQL的主要关键字。这些关键字在查询子句�
 
 - TABLE_PER_CLASS 每个类表策略
 每个类表策略是创建一个中间表为每个子类实体。
+
+---
 
 ## JPA实体关系
 
@@ -267,6 +278,8 @@ Between, And, 和Like是JPQL的主要关键字。这些关键字在查询子句�
 
 [JPA实体关系演示实例3](tree/v0.2.3)
 
+
+---
 
 ## JPA标准API
 标准是用来定义查询实体的预定义API。它是定义JPQL查询的另一种方式。这些查询是类型安全的，可移植的，并且容易被改变的语法进行修改。类似于JPQL，它遵循的抽象模式(容易编辑模式)和嵌入的对象。元数据API是夹杂着标准的API模型持久性实体的标准查询。
