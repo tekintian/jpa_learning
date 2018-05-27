@@ -1,9 +1,7 @@
 package cn.tekin.jpa.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Department
@@ -13,23 +11,19 @@ public class Department
     private int id;
     private String name;
 
-    public int getId()
-    {
+    public int getId() {
         return id;
     }
 
-    public void setId(int id)
-    {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getName( )
-    {
+    public String getName() {
         return name;
     }
 
-    public void setName( String deptName )
-    {
-        this.name = deptName;
+    public void setName(String name) {
+        this.name = name;
     }
 }

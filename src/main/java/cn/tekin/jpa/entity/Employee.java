@@ -11,11 +11,11 @@ public class Employee
     private String ename;
     private double salary;
     private String deg;
-    @ManyToOne
+
+    @OneToOne
     private Department department;
 
-    public Employee(int eid,
-                    String ename, double salary, String deg)
+    public Employee(int eid, String ename, double salary, String deg)
     {
         super( );
         this.eid = eid;
@@ -65,11 +65,13 @@ public class Employee
         this.deg = deg;
     }
 
-    public Department getDepartment() {
+    public Department getDepartment()
+    {
         return department;
     }
 
-    public void setDepartment(Department department) {
+    public void setDepartment(Department department)
+    {
         this.department = department;
     }
 }
