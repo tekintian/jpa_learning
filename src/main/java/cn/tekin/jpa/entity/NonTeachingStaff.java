@@ -1,6 +1,5 @@
 package cn.tekin.jpa.entity;
 
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 

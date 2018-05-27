@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@PrimaryKeyJoinColumn(referencedColumnName="sid")
+@PrimaryKeyJoinColumn(referencedColumnName = "sid")
 public class TeachingStaff extends Staff
 {
     private String qualification;
@@ -13,7 +13,7 @@ public class TeachingStaff extends Staff
     public TeachingStaff( int sid, String sname,
                           String qualification,String subjectexpertise )
     {
-        super( sid, sname );
+        super(sid, sname);
         this.qualification = qualification;
         this.subjectexpertise = subjectexpertise;
     }

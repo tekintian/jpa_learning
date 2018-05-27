@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 @Entity
 @Table
-@Inheritance( strategy = InheritanceType.JOINED )
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Staff implements Serializable
 {
     @Id

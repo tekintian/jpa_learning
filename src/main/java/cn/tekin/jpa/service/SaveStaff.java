@@ -19,7 +19,7 @@ public class SaveStaff
 
         //Teaching staff entity
         TeachingStaff ts1=new TeachingStaff(
-                1,"Tekin","MSc MEd","Maths");
+                1,"Gopal","MSc MEd","Maths");
         TeachingStaff ts2=new TeachingStaff(
                 2, "Manisha", "BSc BEd", "English");
         //Non-Teaching Staff entity
